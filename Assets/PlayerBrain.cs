@@ -12,7 +12,7 @@ public class PlayerBrain : MonoBehaviour
     [SerializeField] Rigidbody _rb;
     [SerializeField] float _speed;
 
-    Vector3 _direction;
+    Vector3 Direction ;
 
     private void Start ()
     {
