@@ -9,17 +9,17 @@ public class PlayerBrain : MonoBehaviour
     //[SerializeField] InputActionReference _interraction;
     //[SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _sprint;
-    [SerializeField] Rigidbody _rb;
-    [SerializeField] float _speed;
-    [SerializeField] float _accelerate;
 
-    Vector3 _direction;
-    bool _isRunning;
-    Vector3 Direction
-    {
-        get => _direction;
-        set => _direction = value.normalized;
-    }
+    [SerializeField] BlockMovement movement;
+
+
+    
+
+    //Vector3 Direction
+    //{
+    //    get => _direction;
+    //    set => _direction = value.normalized;
+    //}
 
     private void Start ()
     {
@@ -33,34 +33,21 @@ public class PlayerBrain : MonoBehaviour
 
     private void SprintStart (InputAction.CallbackContext obj)
     {
-        _isRunning = true;
+        movement.LoadSpeed ();       
     }
 
     private void SprintEnd (InputAction.CallbackContext obj)
     {
-        _isRunning = false;
-    }
-
-    private void FixedUpdate ()
-    {
-        if (_isRunning)
-        {
-            _rb.MovePosition (_rb.transform.position +_direction * Time.fixedDeltaTime * (_speed * _accelerate));
-        }
-        else
-        {
-            _rb.MovePosition (_rb.transform.position + _direction * _speed * Time.fixedDeltaTime );
-        }
+        movement.UnloadSpeed ();
     }
 
     private void StartMove (InputAction.CallbackContext obj)
     {
-        _direction = obj.ReadValue<Vector2> ();
-        _direction = new Vector3(_direction.x, 0, _direction.y);
+        movement.SetDirection(obj.ReadValue<Vector2> ());
     }
 
     private void EndMove (InputAction.CallbackContext obj)
     {
-        _direction = Vector3.zero;
+        movement.SetDirection (Vector2.zero);
     }
 }
