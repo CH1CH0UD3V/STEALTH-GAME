@@ -15,29 +15,31 @@ public class BlockMovement : MonoBehaviour
 
     public void SetDirection (Vector2 vector2)
     {
-        _direction = new Vector3 (_direction.x, 0, _direction.y);
+        _direction = new Vector3 (vector2.x, 0, vector2.y);
     }
 
     private void FixedUpdate ()
 
     {
+        Debug.Log ("Tick");
         if (_direction.magnitude > 0)
         {
-            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * _speed));
+            if (_isRunning)
+            {
+                //_rb.transform.Translate (_direction * Time.fixedDeltaTime * (_speed * _accelerate));
+                _rb.MovePosition (_rb.transform.position + _direction * Time.fixedDeltaTime * (_speed * _accelerate));
+            }
+            else
+            {
+                //_rb.transform.Translate (_direction * Time.fixedDeltaTime * (_speed ));
+                _rb.MovePosition (_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed));
+            }
         }
         else
         {
             _direction = Vector3.zero;
         }
 
-        if (_isRunning)
-        {
-            _rb.MovePosition (_rb.transform.position + _direction * Time.fixedDeltaTime * (_speed * _accelerate));
-        }
-        else
-        {
-            _isRunning = false;
-        }
     }
 
 
