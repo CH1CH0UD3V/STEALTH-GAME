@@ -136,12 +136,12 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.6313726, b: 1, a: 1}
-  deepColor: {r: 0, g: 0.4273705, b: 0.6784314, a: 1}
-  colorDepth: 2.59
-  horizonColor: {r: 0, g: 0.22736892, b: 0.8, a: 1}
+  deepColor: {r: 0, g: 0.42736232, b: 0.6784314, a: 1}
+  colorDepth: 2.39
+  horizonColor: {r: 0, g: 0.22736073, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30187762, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30186945, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -161,10 +161,10 @@ MonoBehaviour:
   surfaceFoamDirection2: 0.083
   surfaceFoamSpeed1: 0.05
   surfaceFoamSpeed2: 1.07
-  surfaceFoamTilingAndOffset: {x: -1, y: -1, z: 0.15, w: 0.08}
+  surfaceFoamTilingAndOffset: {x: -1, y: -1, z: 0.194, w: 0.08}
   surfaceFoamOffsetX: -1
   surfaceFoamOffsetY: -1
-  surfaceFoamScale1: 0.15
+  surfaceFoamScale1: 0.194
   surfaceFoamScale2: 0.08
   enableSurfaceFoam: 1
   surfaceFoamHeightMask: 0

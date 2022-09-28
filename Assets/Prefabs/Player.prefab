@@ -355,6 +355,7 @@ MonoBehaviour:
   _sprint: {fileID: -9100951136481074993, guid: 19b099eaedf13ff47bb3a618cdde98e2,
     type: 3}
   movement: {fileID: 2678896991754338758}
+  _sO: {fileID: 11400000, guid: 2ff867861ba8b244a85eb9c93bbe4d91, type: 2}
 --- !u!114 &2678896991754338758
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class PlayerBrain : MonoBehaviour
     [SerializeField] InputActionReference _sprint;
 
     [SerializeField] BlockMovement movement;
+    [SerializeField] ScriptableObject _sO;
 
 
     

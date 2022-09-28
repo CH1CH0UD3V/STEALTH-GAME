@@ -9,8 +9,10 @@ public class BlockMovement : MonoBehaviour
     [SerializeField] CharacterController _cc;
     [SerializeField] float _speed;
     [SerializeField] float _accelerate;
+    [SerializeField] Camera _cam;
 
     Vector3 _direction;
+    Vector3 _calculatedDirection;
     bool _isRunning;
 
     public void SetDirection (Vector2 vector2)
@@ -40,6 +42,15 @@ public class BlockMovement : MonoBehaviour
         else
         {
             _direction = Vector3.zero;
+        }
+        //Gravity
+        if (_cc.isGrounded)
+        {
+            _calculatedDirection.y = 0;
+        }
+        else
+        {
+            _calculatedDirection.y = Physics.gravity / 3 * Time.fixedDeltaTime;
         }
 
     }
