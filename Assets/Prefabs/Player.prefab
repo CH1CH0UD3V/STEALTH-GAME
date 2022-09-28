@@ -76,8 +76,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2678896991119393979}
   - {fileID: 2678896990960298880}
+  - {fileID: 2678896991119393979}
   - {fileID: 2678896991754338763}
   - {fileID: 2678896991787072943}
   m_Father: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_Children:
   - {fileID: 6903505728568014639}
   m_Father: {fileID: 2678896990615696138}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2678896991078550213
 GameObject:
@@ -226,7 +226,7 @@ Transform:
   - {fileID: 2678896991297377430}
   - {fileID: 2678896991078550214}
   m_Father: {fileID: 2678896990615696138}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2678896991297377429
 GameObject:
@@ -372,6 +372,8 @@ MonoBehaviour:
   _cc: {fileID: 2678896990615696132}
   _speed: 5
   _accelerate: 2.5
+  _cam: {fileID: 0}
+  _followCameraOrientation: 1
 --- !u!1 &2678896991787072942
 GameObject:
   m_ObjectHideFlags: 0

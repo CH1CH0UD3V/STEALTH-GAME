@@ -5,16 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerBrain : MonoBehaviour
 {
+    #region Champ
     [SerializeField] InputActionReference _move;
     //[SerializeField] InputActionReference _interraction;
-    //[SerializeField] InputActionReference _jump;
+    [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _sprint;
 
     [SerializeField] BlockMovement movement;
-    [SerializeField] ScriptableObject _sO;
+    [SerializeField] ScriptableObject _sO; //l'utiliser plus tard
+    #endregion
 
 
-    
 
     //Vector3 Direction
     //{
@@ -22,6 +23,8 @@ public class PlayerBrain : MonoBehaviour
     //    set => _direction = value.normalized;
     //}
 
+
+    #region void Start
     private void Start ()
     {
         _move.action.started += StartMove;
@@ -29,19 +32,13 @@ public class PlayerBrain : MonoBehaviour
         _move.action.canceled += EndMove;
         _sprint.action.started += SprintStart;
         _sprint.action.canceled += SprintEnd;
+        _jump.action.started += JumpStart;
+        _jump.action.canceled += EndJump;
     }
+    #endregion
 
 
-    private void SprintStart (InputAction.CallbackContext obj)
-    {
-        movement.LoadSpeed ();       
-    }
-
-    private void SprintEnd (InputAction.CallbackContext obj)
-    {
-        movement.UnloadSpeed ();
-    }
-
+    #region Move
     private void StartMove (InputAction.CallbackContext obj)
     {
         movement.SetDirection(obj.ReadValue<Vector2> ());
@@ -51,4 +48,31 @@ public class PlayerBrain : MonoBehaviour
     {
         movement.SetDirection (Vector2.zero);
     }
+    #endregion
+
+    #region Sprint
+    private void SprintStart (InputAction.CallbackContext obj)
+    {
+        movement.LoadSpeed ();       
+    }
+
+    private void SprintEnd (InputAction.CallbackContext obj)
+    {
+        movement.UnloadSpeed ();
+    }
+    #endregion
+
+
+    #region Jump
+    private void JumpStart (InputAction.CallbackContext obj)
+    {
+        movement.LaunchJump();
+    }
+
+    private void EndJump (InputAction.CallbackContext obj)
+    {
+        throw new System.NotImplementedException ();
+    }
+    #endregion
+
 }

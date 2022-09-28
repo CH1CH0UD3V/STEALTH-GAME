@@ -10,6 +10,7 @@ public class BlockMovement : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] float _accelerate;
     [SerializeField] Camera _cam;
+    [SerializeField] bool _followCameraOrientation;
 
     Vector3 _direction;
     Vector3 _calculatedDirection;
@@ -38,6 +39,16 @@ public class BlockMovement : MonoBehaviour
                 //_rb.MovePosition (_rb.transform.position + dir);
                 _cc.Move (dir);
             }
+            if (_followCameraOrientation)//direction de la cam derriere le joueur qui reste fixé derriere le joueur son cam.z = player.z
+            {
+                var forwardForCamera = _cam.transform.TransformDirection (dir);
+                _calculatedDirection.x = forwardForCamera.x;
+                _calculatedDirection.y = forwardForCamera.y;
+            }
+            else
+            {
+
+            }
         }
         else
         {
@@ -50,8 +61,9 @@ public class BlockMovement : MonoBehaviour
         }
         else
         {
-            _calculatedDirection.y = Physics.gravity / 3 * Time.fixedDeltaTime;
+            _calculatedDirection.y += -3 * Time.fixedDeltaTime;
         }
+        _cc.Move(_calculatedDirection);
 
     }
 
@@ -66,4 +78,8 @@ public class BlockMovement : MonoBehaviour
         _isRunning = false;
     }
 
+    public void LaunchJump ()
+    {
+        throw new NotImplementedException ();
+    }
 }
