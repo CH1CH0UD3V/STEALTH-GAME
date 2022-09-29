@@ -30,10 +30,11 @@ public class PlayerBrain : MonoBehaviour
         _move.action.started += StartMove;
         _move.action.performed += StartMove;
         _move.action.canceled += EndMove;
+
         _sprint.action.started += SprintStart;
         _sprint.action.canceled += SprintEnd;
+
         _jump.action.started += JumpStart;
-        _jump.action.canceled += EndJump;
     }
     #endregion
 
@@ -67,11 +68,6 @@ public class PlayerBrain : MonoBehaviour
     private void JumpStart (InputAction.CallbackContext obj)
     {
         movement.LaunchJump();
-    }
-
-    private void EndJump (InputAction.CallbackContext obj)
-    {
-        throw new System.NotImplementedException ();
     }
     #endregion
 

@@ -7,14 +7,17 @@ public class BlockMovement : MonoBehaviour
 {
     [SerializeField] PlayerBrain _brain;
     [SerializeField] CharacterController _cc;
-    [SerializeField] float _speed;
-    [SerializeField] float _accelerate;
     [SerializeField] Camera _cam;
     [SerializeField] bool _followCameraOrientation;
+    [SerializeField] float _speed;
+    [SerializeField] float _accelerate;
+    [SerializeField] float _jumpForce;
+    [SerializeField] float _gravity;
 
     Vector3 _direction;
     Vector3 _calculatedDirection;
     bool _isRunning;
+    bool _isJumping;
 
     public void SetDirection (Vector2 vector2)
     {
@@ -23,7 +26,7 @@ public class BlockMovement : MonoBehaviour
 
     private void FixedUpdate ()
     {
-        Debug.Log ("Tick");
+        
         if (_direction.magnitude > 0)
         {
             var dir = (_direction * Time.fixedDeltaTime * _speed);
@@ -53,18 +56,30 @@ public class BlockMovement : MonoBehaviour
         else
         {
             _direction = Vector3.zero;
+            _calculatedDirection.x = 0;
+            _calculatedDirection.z = 0;
         }
-        //Gravity
+
+        //Jump
         if (_cc.isGrounded)
         {
             _calculatedDirection.y = 0;
         }
-        else
-        {
-            _calculatedDirection.y += -3 * Time.fixedDeltaTime;
-        }
-        _cc.Move(_calculatedDirection);
 
+        if (_isJumping)
+        {
+            _isJumping = false;
+            Debug.Log ("SAUUUUTTTTEEEE");
+            _calculatedDirection += new Vector3(0, _jumpForce, 0);
+
+            //if (_cc.isGrounded)
+            //{
+            //}
+        }
+
+        //Gravity
+        _calculatedDirection.y += _gravity * Time.fixedDeltaTime;
+        _cc.Move(_calculatedDirection);
     }
 
 
@@ -80,6 +95,7 @@ public class BlockMovement : MonoBehaviour
 
     public void LaunchJump ()
     {
-        throw new NotImplementedException ();
+        _isJumping = true;
     }
+
 }

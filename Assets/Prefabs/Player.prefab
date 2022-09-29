@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _move: {fileID: -3112911933935965987, guid: 19b099eaedf13ff47bb3a618cdde98e2, type: 3}
+  _jump: {fileID: 116573894177138726, guid: 19b099eaedf13ff47bb3a618cdde98e2, type: 3}
   _sprint: {fileID: -9100951136481074993, guid: 19b099eaedf13ff47bb3a618cdde98e2,
     type: 3}
   movement: {fileID: 2678896991754338758}
@@ -370,10 +371,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brain: {fileID: 2678896991754338757}
   _cc: {fileID: 2678896990615696132}
-  _speed: 5
-  _accelerate: 2.5
   _cam: {fileID: 0}
   _followCameraOrientation: 1
+  _speed: 5
+  _accelerate: 2.5
+  _jumpForce: 5
+  _gravity: -6
 --- !u!1 &2678896991787072942
 GameObject:
   m_ObjectHideFlags: 0
