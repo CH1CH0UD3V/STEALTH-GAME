@@ -6,15 +6,6 @@
             "id": "a9a74f50-9e53-4de8-84cc-c0f96d184793",
             "actions": [
                 {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "8dadbc7d-06cb-4351-9bc0-3a8e246ac5f3",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Camera",
                     "type": "Value",
                     "id": "261600f5-05b9-43a4-bdd4-8fae540a8f45",
@@ -24,18 +15,36 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "8dadbc7d-06cb-4351-9bc0-3a8e246ac5f3",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Sprint",
                     "type": "Button",
-                    "id": "0eb5f69a-bf9a-4b86-9451-22978a76b48b",
+                    "id": "711e03e8-dc26-4bf8-81f9-73a4c9ed727c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprint",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "711e03e8-dc26-4bf8-81f9-73a4c9ed727c",
+                    "id": "12d2ff76-94a9-4908-8f6c-1e196e06c55f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "0eb5f69a-bf9a-4b86-9451-22978a76b48b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -52,6 +61,39 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "0c5d06f7-2e70-4fd4-af5f-0322fa98151e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interraction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1928416-b0b8-443d-876f-d71f4e936f64",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0a373b2-ea8b-4d2e-afaf-070e9e19cc66",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "Keyboard Arrow",
                     "id": "f56ab574-3f06-4a0c-9830-9c76d483057b",
@@ -164,28 +206,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b0a373b2-ea8b-4d2e-afaf-070e9e19cc66",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Camera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "58eaf1a7-7b8c-461d-b03e-3d51943d78af",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "9d0df89c-6934-4418-b025-3ebfe19a7cfe",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
@@ -197,12 +217,12 @@
                 },
                 {
                     "name": "",
-                    "id": "0c5d06f7-2e70-4fd4-af5f-0322fa98151e",
-                    "path": "<Keyboard>/q",
+                    "id": "58eaf1a7-7b8c-461d-b03e-3d51943d78af",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interraction",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

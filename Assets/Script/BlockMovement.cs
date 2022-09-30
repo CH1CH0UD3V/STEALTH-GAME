@@ -71,10 +71,6 @@ public class BlockMovement : MonoBehaviour
             _isJumping = false;
             Debug.Log ("SAUUUUTTTTEEEE");
             _calculatedDirection += new Vector3(0, _jumpForce, 0);
-
-            //if (_cc.isGrounded)
-            //{
-            //}
         }
 
         //Gravity

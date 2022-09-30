@@ -10,8 +10,10 @@ public class PlayerBrain : MonoBehaviour
     //[SerializeField] InputActionReference _interraction;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _sprint;
+    [SerializeField] InputActionReference _attack;
 
     [SerializeField] BlockMovement movement;
+    [SerializeField] BlockAttack attack;
     [SerializeField] ScriptableObject _sO; //l'utiliser plus tard
     #endregion
 
@@ -35,6 +37,8 @@ public class PlayerBrain : MonoBehaviour
         _sprint.action.canceled += SprintEnd;
 
         _jump.action.started += JumpStart;
+
+        _attack.action.started += StartAttack;
     }
     #endregion
 
@@ -71,4 +75,8 @@ public class PlayerBrain : MonoBehaviour
     }
     #endregion
 
+    private void StartAttack (InputAction.CallbackContext obj)
+    {
+        attack.LaunchAttack ();
+    }
 }

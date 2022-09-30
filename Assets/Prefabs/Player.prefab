@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 2678896991754338756}
   - component: {fileID: 2678896991754338757}
   - component: {fileID: 2678896991754338758}
+  - component: {fileID: 1359873462}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -355,7 +356,9 @@ MonoBehaviour:
   _jump: {fileID: 116573894177138726, guid: 19b099eaedf13ff47bb3a618cdde98e2, type: 3}
   _sprint: {fileID: -9100951136481074993, guid: 19b099eaedf13ff47bb3a618cdde98e2,
     type: 3}
+  _attack: {fileID: -323032090573761618, guid: 19b099eaedf13ff47bb3a618cdde98e2, type: 3}
   movement: {fileID: 2678896991754338758}
+  attack: {fileID: 1359873462}
   _sO: {fileID: 11400000, guid: 2ff867861ba8b244a85eb9c93bbe4d91, type: 2}
 --- !u!114 &2678896991754338758
 MonoBehaviour:
@@ -377,6 +380,19 @@ MonoBehaviour:
   _accelerate: 2.5
   _jumpForce: 5
   _gravity: -6
+--- !u!114 &1359873462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678896991754338762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _brain: {fileID: 2678896991754338757}
 --- !u!1 &2678896991787072942
 GameObject:
   m_ObjectHideFlags: 0
