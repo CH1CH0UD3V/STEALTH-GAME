@@ -8,6 +8,7 @@ public class BlockMovement : MonoBehaviour
     [SerializeField] PlayerBrain _brain;
     [SerializeField] CharacterController _cc;
     [SerializeField] Camera _cam;
+    [SerializeField] Animator _animator;
     [SerializeField] bool _followCameraOrientation;
     [SerializeField] float _speed;
     [SerializeField] float _accelerate;

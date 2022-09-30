@@ -75,8 +75,10 @@ public class PlayerBrain : MonoBehaviour
     }
     #endregion
 
+    #region Attack
     private void StartAttack (InputAction.CallbackContext obj)
     {
         attack.LaunchAttack ();
     }
+    #endregion
 }
