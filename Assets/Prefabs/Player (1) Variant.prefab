@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5028245194846782063}
   - component: {fileID: 5028245194846782050}
   - component: {fileID: 6983588526508410386}
+  - component: {fileID: 4584832358876542263}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -76,7 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e83c0de17346c409c621ac521b11b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _brain: {fileID: 0}
+  _pBrain: {fileID: 0}
+  _eBrain: {fileID: 4584832358876542263}
   _cc: {fileID: 5028245195989971104}
   _cam: {fileID: 0}
   _animator: {fileID: 435667296618700266}
@@ -97,8 +99,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _brain: {fileID: 0}
+  _pBrain: {fileID: 0}
+  _eBrain: {fileID: 0}
   _animator: {fileID: 435667296618700266}
+--- !u!114 &4584832358876542263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028245194846782062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f615cb9dec435e4c9962aeec10cd983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 5028245194846782050}
+  attack: {fileID: 6983588526508410386}
+  _sO: {fileID: 11400000, guid: 25602c3e361985347a8f15761f86a8ae, type: 2}
 --- !u!1 &5028245194960377649
 GameObject:
   m_ObjectHideFlags: 0

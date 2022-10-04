@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Chichou
   _clan: LaStreet
-  _age: 0
-  _maxHealth: 0
-  _maxDefense: 0
-  _maxMana: 0
+  _age: 18
+  _maxHealth: 150
+  _maxDefense: 60
+  _maxMana: 60

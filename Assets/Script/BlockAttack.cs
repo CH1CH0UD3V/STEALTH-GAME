@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class BlockAttack : MonoBehaviour
 {
-    [SerializeField] PlayerBrain _brain;
+    [SerializeField] PlayerBrain _pBrain;
+    [SerializeField] AIBrain _eBrain;
     [SerializeField] Animator _animator;
 
     public void LaunchAttack ()
     {
-        //animation Attack
+        _animator.SetTrigger ("Attack");
     }
 }

@@ -19,13 +19,6 @@ public class PlayerBrain : MonoBehaviour
 
 
 
-    //Vector3 Direction
-    //{
-    //    get => _direction;
-    //    set => _direction = value.normalized;
-    //}
-
-
     #region void Start
     private void Start ()
     {

@@ -55,7 +55,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2678896990615696138}
-  - component: {fileID: 2678896990615696139}
   - component: {fileID: 2678896990615696132}
   m_Layer: 0
   m_Name: Player
@@ -83,22 +82,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2678896990615696139
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2678896990615696137}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.41
-  m_AngularDrag: 0.06
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!143 &2678896990615696132
 CharacterController:
   m_ObjectHideFlags: 0
@@ -375,7 +358,7 @@ MonoBehaviour:
   _brain: {fileID: 2678896991754338757}
   _cc: {fileID: 2678896990615696132}
   _cam: {fileID: 0}
-  _animator: {fileID: 0}
+  _animator: {fileID: 2357833485491219251}
   _followCameraOrientation: 1
   _speed: 5
   _accelerate: 2.5
@@ -495,6 +478,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
+--- !u!95 &2357833485491219251 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+    type: 3}
+  m_PrefabInstance: {fileID: 6760319830842709253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2824333579409399401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
