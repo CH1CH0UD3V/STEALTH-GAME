@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5028245195243686242}
   - component: {fileID: 5028245195243686243}
+  - component: {fileID: 2410804376618234212}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -219,6 +220,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.08
   m_Center: {x: 0, y: 0.62015605, z: 0.22834897}
+--- !u!114 &2410804376618234212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028245195243686241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2d64816a9bc5448bab2cbc3e5aa0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attack: {fileID: 6983588526508410386}
+  _distanceMin: 2
+  _rayDistance: 131.58
+  Enemy: {fileID: 5028245195989971118}
 --- !u!1 &5028245195293206563
 GameObject:
   m_ObjectHideFlags: 0
