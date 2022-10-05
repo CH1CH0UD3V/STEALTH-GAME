@@ -443,7 +443,7 @@ MonoBehaviour:
   _cam: {fileID: 0}
   _animator: {fileID: 2357833485491219251}
   _followCameraOrientation: 1
-  _speed: 5
+  _speed: 15
   _accelerate: 2.5
   _jumpForce: 5
   _gravity: -6
