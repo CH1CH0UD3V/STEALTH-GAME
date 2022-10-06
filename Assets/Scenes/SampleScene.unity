@@ -1197,51 +1197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Water
       objectReference: {fileID: 0}
-    - target: {fileID: 2195311901308947304, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: deepColor.g
-      value: 0.42735508
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: normalsScale
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: normalsSpeed
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: shoreColor.b
-      value: 0.30186224
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: horizonColor.g
-      value: 0.22735351
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: enableRefraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: normalsMovement.x
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
-        type: 3}
-      propertyPath: normalsMovement.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2894698916591434107, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: m_RootOrder
@@ -2719,7 +2674,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.12566811, y: 0.009825606, z: -0.0012446941, w: 0.9920229}
+  m_LocalRotation: {x: 0.12566811, y: 0.009825605, z: -0.0012446941, w: 0.9920229}
   m_LocalPosition: {x: 145.58382, y: 2.22, z: 54.200825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3054,7 +3009,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376644565}
-  m_LocalRotation: {x: 0.12566808, y: 0.009825624, z: -0.0012446961, w: 0.99202293}
+  m_LocalRotation: {x: 0.12566808, y: 0.009825623, z: -0.0012446961, w: 0.99202293}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4934,7 +4889,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636563802}
-  m_LocalRotation: {x: 0.14369166, y: 0.009801345, z: -0.0014232113, w: 0.98957294}
+  m_LocalRotation: {x: 0.14369167, y: 0.00980139, z: -0.001423218, w: 0.98957294}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16018,11 +15973,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 29386196, guid: c3444bd8119662547b160791e205db01, type: 3}
-      propertyPath: m_Name
-      value: SwordCollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678896990296272294, guid: c3444bd8119662547b160791e205db01,
+    - target: {fileID: 873311218329869207, guid: c3444bd8119662547b160791e205db01,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -16510,6 +16461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.03753296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410804376618234212, guid: a4321e26af4a83f4fb66029b12fa34d3,
+        type: 3}
+      propertyPath: _heightRay
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2942560153549303933, guid: a4321e26af4a83f4fb66029b12fa34d3,
         type: 3}

@@ -5,19 +5,14 @@ using UnityEngine;
 public class HitBoxEnemy : MonoBehaviour
 {
     [SerializeField] BlockAttack _attack;
-    [SerializeField] float _distanceMin;
-    //[SerializeField] float _heightRay;
+    [SerializeField] float _heightRay;
     [SerializeField] float _rayDistance;
     [SerializeField] Transform Enemy;
 
-    private void Reset ()
-    {
-        _distanceMin = 2f;
-    }
-
+    
     private void Update ()
     {
-        Debug.DrawRay (Enemy.position + Vector3.up /** _heightRay*/, Vector3.forward * _rayDistance,Color.yellow);
+        Debug.DrawRay (Enemy.position + Vector3.up * _heightRay, Vector3.forward * _rayDistance,Color.yellow);
     }
     private void OnTriggerEnter (Collider other)
     {
@@ -32,8 +27,6 @@ public class HitBoxEnemy : MonoBehaviour
         {
             _attack.LaunchAttack ();
             return;
-        }
-
-        
+        }        
     }
 }

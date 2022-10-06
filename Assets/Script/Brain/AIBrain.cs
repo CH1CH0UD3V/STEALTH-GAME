@@ -27,4 +27,15 @@ public class AIBrain : MonoBehaviour
                 break;
         }
     }
+
+    void Patrol ()
+    {
+    }
+    void Chase ()
+    {
+    }
+    void Attack ()
+    {
+    }
+    
 }

@@ -78,7 +78,7 @@ public class BlockMovement : MonoBehaviour
         //Gravity
         _calculatedDirection.y += _gravity * Time.fixedDeltaTime;
 
-        //Move + Look At
+        //Move + Look At // Pour dire au personnage de se tourner dans la direction de l'input
         _cc.Move(_calculatedDirection);
         if(_followCameraOrientation)
         {

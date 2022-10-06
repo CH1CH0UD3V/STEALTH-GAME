@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6158408525932184397}
   - component: {fileID: 453604104898822068}
   - component: {fileID: 2533760440387989058}
+  - component: {fileID: 7536095002952025840}
   m_Layer: 4
   m_Name: Circular Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2894698916591434107
 Transform:
@@ -136,12 +137,12 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.6313726, b: 1, a: 1}
-  deepColor: {r: 0, g: 0.42736232, b: 0.6784314, a: 1}
+  deepColor: {r: 0, g: 0.42734003, b: 0.6784314, a: 1}
   colorDepth: 2.39
-  horizonColor: {r: 0, g: 0.22736073, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22733843, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30186945, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30184716, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -200,11 +201,11 @@ MonoBehaviour:
   lightingDiffuseColor: {r: 0, g: 0, b: 0, a: 0}
   lightingHardness: 0
   normalsTexture: {fileID: 2800000, guid: a41da5f5671718b47bbc71e9ef691103, type: 3}
-  normalsMovement: {x: 0.228, y: 1.55}
+  normalsMovement: {x: 0.013, y: 0.62}
   normalsStrength: 0.29
-  normalsScale: 1.55
-  normalsSpeed: 0.228
-  refractionStrength: 0.3
+  normalsScale: 0.62
+  normalsSpeed: 0.013
+  refractionStrength: 0.048
   waveVisuals: {x: 0.055, y: 7.9, z: 1.38}
   waveSteepness: 0.055
   waveLength: 7.9
@@ -221,3 +222,17 @@ MonoBehaviour:
   meshRenderer: {fileID: 453604104898822068}
   meshFilter: {fileID: 6158408525932184397}
   material: {fileID: 2100000, guid: ea66d3ba3c5ac7d498707e8c9e54524f, type: 2}
+--- !u!64 &7536095002952025840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195311901308947304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7713082738368025123, guid: a4328de531d19f2429bc9f98f0e9f9c6, type: 3}

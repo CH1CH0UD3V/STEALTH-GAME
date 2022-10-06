@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 29386199}
   - component: {fileID: 29386198}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SwordCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,66 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17823792, y: 0.7022699, z: 0.04522915}
   m_Center: {x: 0.00013099978, y: 0.16670486, z: -0.00223371}
+--- !u!1 &873311218329869207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9043130547248449379}
+  - component: {fileID: 2678896992212374030}
+  - component: {fileID: 5770013629786635242}
+  m_Layer: 0
+  m_Name: SwimAction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &9043130547248449379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873311218329869207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.641, z: 0.137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2678896991119393979}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2678896992212374030
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873311218329869207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5770013629786635242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873311218329869207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cac63520c0c9ac459dc34f19b21e50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 0.7
+  _animator: {fileID: 0}
 --- !u!1 &2678896990296272294
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +352,7 @@ Transform:
   - {fileID: 2678896990296272295}
   - {fileID: 2678896991297377430}
   - {fileID: 2678896991078550214}
+  - {fileID: 9043130547248449379}
   m_Father: {fileID: 2678896990615696138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
