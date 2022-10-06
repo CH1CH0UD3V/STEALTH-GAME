@@ -14,7 +14,7 @@ public class CharacterSO : ScriptableObject
 
     public string Name { get => _name;}
     public string Clan { get => _clan; }
-    public int Âge { get => _age;}
+    public int Age { get => _age;}
     public int MaxHealth { get => _maxHealth;}
     public int MaxDefense { get => _maxDefense;}
     public int MaxMana { get => _maxMana;}

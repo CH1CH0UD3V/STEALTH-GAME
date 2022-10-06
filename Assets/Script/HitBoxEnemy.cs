@@ -14,13 +14,26 @@ public class HitBoxEnemy : MonoBehaviour
     {
         _distanceMin = 2f;
     }
+
+    private void Update ()
+    {
+        Debug.DrawRay (Enemy.position + Vector3.up /** _heightRay*/, Vector3.forward * _rayDistance,Color.yellow);
+    }
     private void OnTriggerEnter (Collider other)
     {
-        float _distance = Vector3.Distance (other.transform.position, transform.position);
-        Debug.DrawLine (Enemy.transform.position + Vector3.up /** _heightRay*/, Vector3.forward * _rayDistance,Color.yellow);
-        if (_distance < _distanceMin)
+        if(other is CharacterController)
         {
             _attack.LaunchAttack ();
+            return;
         }
+
+        var cc = other.GetComponentInParent<CharacterController> ();
+        if (cc != null)
+        {
+            _attack.LaunchAttack ();
+            return;
+        }
+
+        
     }
 }
