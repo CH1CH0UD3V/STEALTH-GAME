@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8239b2aa13697c14fa40b11b6bc54e8d, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  _name: 
-  _clan: 
-  _age: 0
-  _maxHealth: 0
-  _maxDefense: 0
-  _maxMana: 0
+  _name: Chichi
+  _clan: LaCave
+  _age: 16
+  _maxHealth: 165
+  _maxDefense: 45
+  _maxMana: 62

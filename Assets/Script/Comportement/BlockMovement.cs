@@ -23,7 +23,6 @@ public class BlockMovement : MonoBehaviour
     public void SetDirection (Vector2 vector2)
     {
         _direction = new Vector3 (vector2.x, 0, vector2.y);
-       
     }
 
     private void Update ()
