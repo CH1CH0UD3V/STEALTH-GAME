@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class AIBrain : MonoBehaviour
 {
+    #region CHAMP
     [SerializeField] BlockMovement movement;
     [SerializeField] BlockAttack attack;
     [SerializeField] ScriptableObject _sO;
+    #endregion
+
+    #region ENUM
     enum AIState
     {
         PATROL, CHASE, ATTACK,
     }
     AIState state;
+    #endregion
 
+    #region UPDATE
     private void Update ()
     {
         switch (state)
@@ -27,7 +33,9 @@ public class AIBrain : MonoBehaviour
                 break;
         }
     }
+    #endregion
 
+    #region METHODE
     void Patrol ()
     {
     }
@@ -37,5 +45,5 @@ public class AIBrain : MonoBehaviour
     void Attack ()
     {
     }
-    
+    #endregion
 }
