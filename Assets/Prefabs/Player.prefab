@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _distance: 0.7
   _animator: {fileID: 0}
+  _cc: {fileID: 0}
 --- !u!1 &2678896990296272294
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +507,7 @@ MonoBehaviour:
   _followCameraOrientation: 1
   _speed: 15
   _accelerate: 2.5
-  _jumpForce: 5
+  _jumpForce: 0.75
   _gravity: -6
 --- !u!114 &1359873462
 MonoBehaviour:

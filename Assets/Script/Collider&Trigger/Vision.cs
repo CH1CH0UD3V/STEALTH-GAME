@@ -8,6 +8,8 @@ public class Vision : MonoBehaviour
     #region Champ
     [SerializeField] PlayerTag _target;
     [SerializeField, Layer] string _mapLayer;
+
+    public PlayerTag Target { get { return _target; } }
     #endregion
 
     #region OnTriggerEnter

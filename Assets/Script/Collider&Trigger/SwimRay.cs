@@ -6,6 +6,7 @@ public class SwimRay : MonoBehaviour
 {
    [SerializeField] float _distance;
    [SerializeField] Animator _animator;
+   [SerializeField] CharacterController _cc;
 
     private void OnTriggerEnter (Collider other)
     {
@@ -14,6 +15,7 @@ public class SwimRay : MonoBehaviour
         if(Physics.Raycast(transform.position,other.transform.position, out _))
         {
             _animator.SetTrigger ("Swimming");
+            
         }
     }
 }
