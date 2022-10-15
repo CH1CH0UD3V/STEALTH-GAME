@@ -6,17 +6,18 @@ using UnityEngine.InputSystem;
 public class PlayerBrain : MonoBehaviour
 {
     #region Champ
+    [Header ("Input")]
     [SerializeField] InputActionReference _move;
     //[SerializeField] InputActionReference _interraction;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _sprint;
     [SerializeField] InputActionReference _attack;
 
+    [Header ("")]
     [SerializeField] BlockMovement movement;
     [SerializeField] BlockAttack attack;
-    [SerializeField] ScriptableObject _sO; //l'utiliser plus tard
+    //[SerializeField] ScriptableObject _sO; //l'utiliser plus tard
     #endregion
-
 
 
     #region void Start
@@ -32,6 +33,22 @@ public class PlayerBrain : MonoBehaviour
         _jump.action.started += JumpStart;
 
         _attack.action.started += StartAttack;
+    }
+    #endregion
+
+    #region OnDestroy
+    private void OnDestroy ()
+    {
+        _move.action.started -= StartMove;
+        _move.action.performed -= StartMove;
+        _move.action.canceled -= EndMove;
+
+        _sprint.action.started -= SprintStart;
+        _sprint.action.canceled -= SprintEnd;
+
+        _jump.action.started -= JumpStart;
+
+        _attack.action.started -= StartAttack;
     }
     #endregion
 
