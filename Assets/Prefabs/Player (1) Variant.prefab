@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 452600460}
   - component: {fileID: 452600462}
   - component: {fileID: 452600461}
+  - component: {fileID: 7335939243707785560}
   m_Layer: 0
   m_Name: SwordCollider
   m_TagString: Untagged
@@ -53,11 +54,25 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452600459}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.17823792, y: 0.7022699, z: 0.04522915}
   m_Center: {x: 0.00013099978, y: 0.16670486, z: -0.00223371}
+--- !u!114 &7335939243707785560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452600459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad78c34c77553fd48b11094d713218f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player:
+  - {fileID: 0}
 --- !u!1 &5028245194476994058
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 6983588526508410386}
-  _vision: {fileID: 7335939243707785560}
+  _vision: {fileID: 6746057545996644873}
   _agent: {fileID: 8192609976304459097}
   _path:
   - {fileID: 0}
@@ -168,7 +183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5028245194960377650}
   - component: {fileID: 5028245194960377651}
-  - component: {fileID: 5472933731490413476}
   m_Layer: 0
   m_Name: DamageZone
   m_TagString: Untagged
@@ -205,18 +219,6 @@ CapsuleCollider:
   m_Height: 1.1154811
   m_Direction: 1
   m_Center: {x: 0, y: 0.449687, z: -0.2253772}
---- !u!114 &5472933731490413476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5028245194960377649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61d75bb378b283d449192fc43a66ab81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5028245195243686241
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5520436947414793768}
   - component: {fileID: 1347289314792675955}
-  - component: {fileID: 7335939243707785560}
+  - component: {fileID: 6746057545996644873}
   m_Layer: 0
   m_Name: BoxVision
   m_TagString: Untagged
@@ -510,7 +512,7 @@ CapsuleCollider:
   m_Height: 4.555035
   m_Direction: 1
   m_Center: {x: 0, y: 0.8375418, z: 1.6462394}
---- !u!114 &7335939243707785560
+--- !u!114 &6746057545996644873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

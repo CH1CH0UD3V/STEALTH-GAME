@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 29386197}
   - component: {fileID: 29386199}
   - component: {fileID: 29386198}
+  - component: {fileID: 8347761689125713120}
   m_Layer: 0
   m_Name: SwordCollider
   m_TagString: Untagged
@@ -53,11 +54,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29386196}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.17823792, y: 0.7022699, z: 0.04522915}
   m_Center: {x: 0.00013099978, y: 0.16670486, z: -0.00223371}
+--- !u!114 &8347761689125713120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29386196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a6ff8ff1b18664faf6dd6fece8c437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &873311218329869207
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +506,6 @@ MonoBehaviour:
   _attack: {fileID: -323032090573761618, guid: 19b099eaedf13ff47bb3a618cdde98e2, type: 3}
   movement: {fileID: 2678896991754338758}
   attack: {fileID: 1359873462}
-  _sO: {fileID: 11400000, guid: 2ff867861ba8b244a85eb9c93bbe4d91, type: 2}
 --- !u!114 &2678896991754338758
 MonoBehaviour:
   m_ObjectHideFlags: 0
