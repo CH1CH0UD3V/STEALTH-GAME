@@ -34,11 +34,11 @@ public class BlockMovement : MonoBehaviour
             Vector3 dir = Vector3.zero;
             if (_isRunning)
             {
-                dir = (_direction * Time.fixedDeltaTime * _speed*_accelerate);
+                dir = (_direction * Time.deltaTime * _speed*_accelerate);
             }
             else
             {
-                dir = (_direction * Time.fixedDeltaTime * _speed);
+                dir = (_direction * Time.deltaTime * _speed);
             }
 
             if (_followCameraOrientation)//direction de la cam derriere le joueur qui reste fixé derriere le joueur son cam.z = player.z
