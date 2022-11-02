@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DamageToEnemy : MonoBehaviour
 {
-    //[SerializeField] GameObject[] _enemy;
     private void OnTriggerEnter (Collider other)
     {
         EnemyTag enemy = other.GetComponentInParent<EnemyTag>();
