@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HitBoxPlayer : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField] BlockAttack _attack;
     private void OnTriggerEnter (Collider other)
     {
-        if (other.TryGetComponent<EnemyTag>(out var Enemy))
+        if (other.GetComponentInParent<EnemyTag>())
         {
-
+            _attack.LaunchAttack();
+         
         }
     }
 }

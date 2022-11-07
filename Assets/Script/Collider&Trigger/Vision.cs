@@ -6,9 +6,9 @@ using UnityEngine;
 public class Vision : MonoBehaviour
 {
     #region Champ
-    [SerializeField] PlayerTag _target;
     [SerializeField, Layer] string _mapLayer;
 
+    PlayerTag _target;
     public PlayerTag Target { get { return _target; } }
     #endregion
 

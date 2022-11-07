@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DamageToPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject[] _enemy;
     private void OnTriggerEnter (Collider other)
     {
-        foreach (var e in _enemy)
+        EnemyTag enemy = (EnemyTag) other.GetComponentInParent<EnemyTag> ();
+        if (other == enemy)
         {
-            if (other == e)
-            {
-                Destroy (e.gameObject);
-            }
+            /*désactiver l'ActionMap du joueur*//*---->*///StopPlay ();
+            /* le NavMeshAgent de l'ennemi*//*------>*///_agent.Enable(false);
+            /* afficher un texte dans l'UI qui va te dire que tu as perdu*//*------>*///_text.SetActive(true);
+            /*mettre une coroutine pour que ca laisse le temps au joueur de lire*//*------>*///StartCoroutine
+            /* et te respawn pas trop loin du style à l'entrée de la zone.*//*------>*///je sais pas encore comment je vais faire lol!!
         }
     }
 }
