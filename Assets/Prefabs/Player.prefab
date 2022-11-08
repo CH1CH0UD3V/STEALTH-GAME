@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deccde21cf645e8478d87d714a394cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attack: {fileID: 0}
+  _attack: {fileID: 1359873462}
 --- !u!1 &2678896991119393978
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   _cam: {fileID: 0}
   _animator: {fileID: 2357833485491219251}
   _followCameraOrientation: 1
-  _speed: 15
+  _speed: 4
   _accelerate: 2.5
   _jumpForce: 0.75
   _gravity: -6

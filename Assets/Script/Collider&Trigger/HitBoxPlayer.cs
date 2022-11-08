@@ -9,8 +9,7 @@ public class HitBoxPlayer : MonoBehaviour
     {
         if (other.GetComponentInParent<EnemyTag>())
         {
-            _attack.LaunchAttack();
-         
+            _attack.LaunchAttack();         
         }
     }
 }
