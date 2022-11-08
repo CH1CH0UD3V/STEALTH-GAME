@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 2678896990615696138}
   - component: {fileID: 2678896990615696132}
   - component: {fileID: 2678896992212374031}
+  - component: {fileID: 1348677106618656548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -245,6 +246,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208090ab19ccf284f8614f494ef82e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1348677106618656548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678896990615696137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb27082a64d7f60428082ad10bf5e9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthMax: 100
+  _currentHealth: 100
+  _healing: 0
 --- !u!1 &2678896990960298887
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deccde21cf645e8478d87d714a394cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attack: {fileID: 0}
 --- !u!1 &2678896991119393978
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,9 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pBrain: {fileID: 2678896991754338757}
-  _eBrain: {fileID: 0}
   _animator: {fileID: 2357833485491219251}
+  _health: {fileID: 0}
+  damage: 10
 --- !u!1 &2678896991787072942
 GameObject:
   m_ObjectHideFlags: 0

@@ -134,9 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pBrain: {fileID: 0}
-  _eBrain: {fileID: 4584832358876542263}
   _animator: {fileID: 435667296618700266}
+  _health: {fileID: 0}
+  damage: 5
 --- !u!114 &4584832358876542263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d5c060f7f0d940b02f6c9103bb488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
   _mapLayer: Environement
 --- !u!1001 &6983588527867495332
 PrefabInstance:

@@ -9,11 +9,12 @@ public class BlockAttack : MonoBehaviour
     //[SerializeField] AIBrain _eBrain;
     [SerializeField] Animator _animator;
     [SerializeField] Health _health;
+    [SerializeField] int damage;
 
     public void LaunchAttack ()
     {
         _animator.SetTrigger ("Attack");
-        _health.
+        _health.Damage (damage);
 
     }
 }
