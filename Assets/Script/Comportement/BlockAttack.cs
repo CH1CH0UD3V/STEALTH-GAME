@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class BlockAttack : MonoBehaviour
 {
-    //[SerializeField] PlayerBrain _pBrain;
-    //[SerializeField] AIBrain _eBrain;
     [SerializeField] Animator _animator;
     [SerializeField] Health _health;
     [SerializeField] int damage;
