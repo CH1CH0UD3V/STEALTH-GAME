@@ -53,6 +53,16 @@ public class PlayerBrain : MonoBehaviour
     #endregion
 
 
+    public void ActivActionMap ()
+    {
+        _move.action.actionMap.Enable ();
+    }
+    public void DesactivActionMap ()
+    {
+        _move.action.actionMap.Disable ();
+    }
+
+
     #region Move
     private void StartMove (InputAction.CallbackContext obj)
     {
