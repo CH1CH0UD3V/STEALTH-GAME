@@ -8,11 +8,10 @@ public class PlayerTag : MonoBehaviour
     //[SerializeField] int maxKey;
     //[SerializeField] int _currentKey;
     //[SerializeField] TextMeshProUGUI _keyCount;
-    [SerializeField] GameObject _keyImage;
-    public bool HasKey { get; internal set; }  // essai de lié le playertag a un autre script qui a le trigger et qui detecte les objets tel les clés.
+    public bool HasKey { get; internal set; }  // lie le playertag au script AddKey qui a le trigger et qui detecte le personnage et passe à true.
+    // quand je vais recupérer la clé, playertag va stocker la valeur et haskey passe à true dans la clé pour ouvrir la porte.
     public bool SpawnPointActivated { get; internal set; }
 
-    // quand je vais recupérer la clé, playertag va stocker la valeur et haskey passe à true pour ouvrir une porte.
 }
 
     

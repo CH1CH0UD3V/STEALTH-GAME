@@ -9,24 +9,33 @@ public class HitBoxEnemy : MonoBehaviour
     [SerializeField] float _rayDistance;
     [SerializeField] Transform Enemy;
 
-    
+    Coroutine _attackRoutine;
+
     private void Update ()
     {
         Debug.DrawRay (Enemy.position + Vector3.up * _heightRay, Vector3.forward * _rayDistance,Color.yellow);
     }
     private void OnTriggerEnter (Collider other)
     {
-        if(other is CharacterController)
+        var cc = other.GetComponentInParent<CharacterController> ();
+        if (cc != null && _attackRoutine == null)
         {
-            _attack.LaunchAttack ();
+            _attackRoutine = StartCoroutine (waitForAttack());
             return;
         }
 
-        var cc = other.GetComponentInParent<CharacterController> ();
-        if (cc != null)
-        {
-            _attack.LaunchAttack ();
-            return;
-        }        
+        //var cc = other.GetComponentInParent<CharacterController> ();
+        //if (cc != null)
+        //{
+        //    _attack.LaunchAttack ();
+        //    return;
+        //}        
+    }
+
+    IEnumerator waitForAttack()
+    {
+        _attack.LaunchAttack ();
+        yield return new WaitForSeconds(2);
+        _attackRoutine = null;
     }
 }

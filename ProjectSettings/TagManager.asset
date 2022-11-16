@@ -14,8 +14,8 @@ TagManager:
   - weapon
   - Environement
   - Collider
-  - 
-  - 
+  - HitZone
+  - HitBox
   - 
   - 
   - 

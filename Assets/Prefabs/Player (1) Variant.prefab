@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 435667296618700266}
+  _animatorAttack: {fileID: 0}
   _health: {fileID: 0}
   damage: 5
 --- !u!114 &4584832358876542263
@@ -168,13 +168,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5028245194960377650}
   - component: {fileID: 5028245194960377651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5028245194960377650
 Transform:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 5028245195243686242}
   - component: {fileID: 5028245195243686243}
   - component: {fileID: 2410804376618234212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitBoxEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attack: {fileID: 6983588526508410386}
   _heightRay: 0.5
-  _rayDistance: 2.5
+  _rayDistance: 3
   Enemy: {fileID: 5028245195989971118}
 --- !u!1 &5028245195293206563
 GameObject:
@@ -394,7 +394,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.61
-  m_Speed: 5.6
+  m_Speed: 3.8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -436,7 +436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthMax: 50
   _currentHealth: 50
-  _healing: 0
+  _animationDie: {fileID: 0}
+  _enemy: {fileID: 5028245195989971117}
+  _player: {fileID: 0}
 --- !u!1 &5028245196239924738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,12 +1877,6 @@ PrefabInstance:
 --- !u!4 &108495839800354992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64,
-    type: 3}
-  m_PrefabInstance: {fileID: 6983588527867495332}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &435667296618700266 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7413344840680693326, guid: cc91c8ba8b9a34f4d99e70d721f60b64,
     type: 3}
   m_PrefabInstance: {fileID: 6983588527867495332}
   m_PrefabAsset: {fileID: 0}

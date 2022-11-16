@@ -248,9 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208090ab19ccf284f8614f494ef82e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxKey: 0
-  _currentKey: 0
-  _keyCount: {fileID: 0}
 --- !u!114 &1348677106618656548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthMax: 100
   _currentHealth: 100
-  _healing: 0
+  _animationDie: {fileID: 0}
+  _enemy: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!114 &7113416602018315350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +808,7 @@ GameObject:
   - component: {fileID: 2678896991078550214}
   - component: {fileID: 2678896991078550215}
   - component: {fileID: 2678896992212374032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +902,7 @@ GameObject:
   - component: {fileID: 2678896991297377430}
   - component: {fileID: 2678896991297377431}
   - component: {fileID: 2678896992212374030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 2357833485491219251}
+  _animatorAttack: {fileID: 0}
   _health: {fileID: 0}
   damage: 10
 --- !u!1 &2678896991787072942
@@ -2651,25 +2650,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6760319830842709253}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2561049918834513094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9105106661575754179, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
-    type: 3}
-  m_PrefabInstance: {fileID: 6760319830842709253}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &527929843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2561049918834513094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a9dee5af278dc8429a076d530439524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distanceRaycast: 0.07
 --- !u!4 &2824333579409399401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
