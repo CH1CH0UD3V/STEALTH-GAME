@@ -22,14 +22,7 @@ public class HitBoxEnemy : MonoBehaviour
         {
             _attackRoutine = StartCoroutine (waitForAttack());
             return;
-        }
-
-        //var cc = other.GetComponentInParent<CharacterController> ();
-        //if (cc != null)
-        //{
-        //    _attack.LaunchAttack ();
-        //    return;
-        //}        
+        }   
     }
 
     IEnumerator waitForAttack()

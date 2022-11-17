@@ -13,9 +13,11 @@ public class AIBrain : MonoBehaviour
     [SerializeField] Transform[] _path;
     [SerializeField] float _minChaseDistance;
     [SerializeField] float _attackDistance;
+    [SerializeField] Animator _animation;
     //[SerializeField] ScriptableObject _sO;
 
     int _pathIndex;
+    bool _IsWalking;
     #endregion
 
     #region ENUM
@@ -49,6 +51,7 @@ public class AIBrain : MonoBehaviour
                         _pathIndex = 0;
                     }
                     _agent.SetDestination (_path[_pathIndex].position);
+                    _animation.SetBool ("IsWalking", _IsWalking);//
                 }
 
                 if(_vision.Target != null)
@@ -72,6 +75,7 @@ public class AIBrain : MonoBehaviour
                 }
 
                 _agent.SetDestination (_vision.Target.transform.position);
+                _animation.SetBool ("IsWalking", _IsWalking);//
 
                 break;
             case AIState.ATTACK:

@@ -28,14 +28,17 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
-            _animationDie.SetBool ("IsDead", _IsDead);
-            _player.SetActive (false);
+            if (_player)//
+            {
+                _animationDie.SetBool ("IsDead", _IsDead);//
+                //_player.SetActive (false);
+            }
             _enemy.SetActive(false);
             Mathf.Min(0, CurrentHealth);
         }
         if (CurrentHealth > _healthMax)
         {
-            Mathf.Max(_healthMax, CurrentHealth);
+            Mathf.Max(CurrentHealth, _healthMax);
         }
         //if(_currentHealth < _healthMax)
         //{
