@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 9043130547248449379}
   - component: {fileID: 2914850429461460831}
   - component: {fileID: 5770013629786635242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SwimAction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2678896990296272295}
   - component: {fileID: 2678896990296272288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,9 +262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthMax: 100
   _currentHealth: 100
-  _animationDie: {fileID: 0}
+  _animationDie: {fileID: 2357833485491219251}
   _enemy: {fileID: 0}
-  _player: {fileID: 0}
+  _player: {fileID: 2678896990615696137}
 --- !u!114 &7113416602018315350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2678896990615696137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c72e1df647af4c0098866e944a04b01, type: 3}
   m_Name: 
@@ -282,7 +282,7 @@ MonoBehaviour:
     layers:
       serializedVersion: 2
       m_Bits: 128
-    maxStep: 3.57
+    maxStep: 1.36
     heightOffset: 0
     footSpeed: 5.98
     footRadius: 0.15
@@ -290,7 +290,7 @@ MonoBehaviour:
     prediction: 0.05
     footRotationWeight: 1
     footRotationSpeed: 7
-    maxFootRotationAngle: 90
+    maxFootRotationAngle: 44.4
     rotateSolver: 0
     pelvisSpeed: 5
     pelvisDamper: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2678896990615696137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a70e525c82ce9413fa4d940ad7fcf1db, type: 3}
   m_Name: 
@@ -343,7 +343,7 @@ MonoBehaviour:
     IKPosition: {x: 0, y: 0, z: 0}
     IKPositionWeight: 1
     root: {fileID: 2678896990615696138}
-    iterations: 4
+    iterations: 1
     chain:
     - pin: 0
       pull: 1
@@ -494,7 +494,7 @@ MonoBehaviour:
     - pin: 0
       pull: 1
       push: 0
-      pushParent: 0
+      pushParent: -0.55
       reach: 0.1
       reachSmoothing: 1
       pushSmoothing: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
     - pin: 0
       pull: 1
       push: 0
-      pushParent: 0
+      pushParent: -0.54
       reach: 0.1
       reachSmoothing: 1
       pushSmoothing: 1
@@ -865,7 +865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2678896991119393979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Physic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b08254bd7bbce4cbd6ee2196e52ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animatorAttack: {fileID: 0}
+  _animatorAttack: {fileID: 2357833485491219251}
   _health: {fileID: 0}
   damage: 10
 --- !u!1 &2678896991787072942
@@ -1683,6 +1683,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.10955715
       objectReference: {fileID: 0}
+    - target: {fileID: 4682473949907222776, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682473949907222776, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682473949907222776, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 4714925641704811570, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2111,12 +2126,12 @@ PrefabInstance:
     - target: {fileID: 7169274372601786421, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00007352229
+      value: 0.00007399913
       objectReference: {fileID: 0}
     - target: {fileID: 7169274372601786421, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32165006
+      value: 0.32165062
       objectReference: {fileID: 0}
     - target: {fileID: 7169274372601786421, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}

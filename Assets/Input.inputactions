@@ -6,7 +6,7 @@
             "id": "a9a74f50-9e53-4de8-84cc-c0f96d184793",
             "actions": [
                 {
-                    "name": "Camera",
+                    "name": "CameraPosition",
                     "type": "Value",
                     "id": "261600f5-05b9-43a4-bdd4-8fae540a8f45",
                     "expectedControlType": "Vector2",
@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ZoomCamera",
+                    "type": "Value",
+                    "id": "876913e6-1114-4e58-9d0c-997422bc640b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -94,12 +103,23 @@
                 },
                 {
                     "name": "",
-                    "id": "b0a373b2-ea8b-4d2e-afaf-070e9e19cc66",
-                    "path": "<Mouse>/delta",
+                    "id": "a1a77d07-8475-4814-8eef-87e503389b02",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0ca40e6-2801-4365-990b-d3bf03da3c32",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -159,9 +179,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Keyboard ZQSD",
-                    "id": "07550cf3-c65b-4602-bd6b-4d3190c7be32",
-                    "path": "2DVector",
+                    "name": "gamepadLeft",
+                    "id": "3b07ad2b-e8f8-4e7a-a55b-a9da66f770a4",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -171,8 +191,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "87dee1da-59ed-4740-be5d-da435db6922e",
-                    "path": "<Keyboard>/w",
+                    "id": "4855d17e-616f-4e73-abe4-aa34aa4649e8",
+                    "path": "<DualShockGamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -182,8 +202,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "3feafdf8-b8be-4395-a9bc-90533000f583",
-                    "path": "<Keyboard>/s",
+                    "id": "6c776d79-205a-45db-8db9-c784afbc4065",
+                    "path": "<DualShockGamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -193,8 +213,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "a29e8243-9492-48f9-87a5-77a29e844de3",
-                    "path": "<Keyboard>/a",
+                    "id": "f9da6069-05e2-41d6-badc-230133db6130",
+                    "path": "<DualShockGamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -204,8 +224,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "053efe77-5dbf-41d0-895d-e457960bcb72",
-                    "path": "<Keyboard>/d",
+                    "id": "9b3906be-a71c-4423-bb0a-9d710d8f865b",
+                    "path": "<DualShockGamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -226,8 +246,30 @@
                 },
                 {
                     "name": "",
+                    "id": "3e69a03a-5e32-42ff-a46f-645479684fce",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "58eaf1a7-7b8c-461d-b03e-3d51943d78af",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7b29212-656f-4d0b-a90b-aa4df951952c",
+                    "path": "<DualShockGamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,6 +285,83 @@
                     "processors": "",
                     "groups": "",
                     "action": "FocusMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84458c1f-1584-448c-863d-1099b9155304",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "gamepadRight",
+                    "id": "d8b670a4-1ca6-4cc2-8514-aeb2737f2c24",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "baaf042e-8a0a-43d8-b737-12781605f228",
+                    "path": "<DualShockGamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3777ef6a-00c1-43b4-8080-ba530c94fe94",
+                    "path": "<DualShockGamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "acc441b4-a857-48f5-96cf-e72e3155579e",
+                    "path": "<DualShockGamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "abc6b613-0659-432c-9fc0-edfc23eb4db4",
+                    "path": "<DualShockGamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b398986f-fba5-4d2d-ac67-4f000ab102f4",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ZoomCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

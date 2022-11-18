@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     [SerializeField] Animator _animationDie;
     [SerializeField] GameObject _enemy;
     [SerializeField] GameObject _player;
+    [SerializeField] bool _ifPlayerDead;//
+    [SerializeField] bool _ifEnemyDead;//
 
     //[SerializeField] int _healing;
 
@@ -28,12 +30,15 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
-            if (_player)//
-            {
-                _animationDie.SetBool ("IsDead", _IsDead);//
+            if (_ifPlayerDead)//
+            {//
+                _animationDie.SetBool ("IsDead", _IsDead);
                 //_player.SetActive (false);
-            }
-            _enemy.SetActive(false);
+            }//
+            if (_ifEnemyDead)//
+            {//
+                _enemy.SetActive(false);
+            }//
             Mathf.Min(0, CurrentHealth);
         }
         if (CurrentHealth > _healthMax)
