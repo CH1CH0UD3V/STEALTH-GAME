@@ -7,9 +7,14 @@ public class HitBoxPlayer : MonoBehaviour
     [SerializeField] BlockAttack _attack;
     private void OnTriggerEnter (Collider other)
     {
-        if (other.GetComponentInParent<EnemyTag>())
+        var enemy = other.GetComponentInParent<EnemyTag> ();
+        if (enemy != null )
         {
-            _attack.LaunchAttack();
+            _attack.LaunchAttack();            
+            return;
+        }
+        else
+        {
             return;
         }
     }

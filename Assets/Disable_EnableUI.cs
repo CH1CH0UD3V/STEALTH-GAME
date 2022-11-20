@@ -20,12 +20,18 @@ public class Disable_EnableUI : MonoBehaviour
         var player = other.GetComponentInParent<PlayerTag> ();
         if (player != null)
         {
-            _firstUi.SetActive (false);
-            _secondUi.SetActive (true);
-            _firstPassed = true;
-            _secondPassed = true;
-            _animationHousePair1.SetBool ("Passed", _firstPassed);
-            _animationHousePair2.SetBool ("SecondPassed", _secondPassed);
+            StartCoroutine (await ()); 
         }
+    }
+
+    IEnumerator await ()
+    {
+        yield return new WaitForSeconds(0.8f);
+        _firstUi.SetActive (false);
+        _secondUi.SetActive (true);
+        _firstPassed = true;
+        _secondPassed = true;
+        _animationHousePair1.SetBool ("Passed", _firstPassed);
+        _animationHousePair2.SetBool ("SecondPassed", _secondPassed);
     }
 }
