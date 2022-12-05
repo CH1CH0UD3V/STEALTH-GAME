@@ -531,6 +531,8 @@ MonoBehaviour:
   _animationDie: {fileID: 0}
   _enemy: {fileID: 5028245195989971117}
   _player: {fileID: 0}
+  _ifPlayerDead: 0
+  _ifEnemyDead: 0
 --- !u!1 &5028245196239924738
 GameObject:
   m_ObjectHideFlags: 0

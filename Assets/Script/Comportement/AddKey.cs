@@ -15,8 +15,8 @@ public class AddKey : MonoBehaviour
             if (playerTag.HasKey == true)
             {
                 Destroy (transform.parent.gameObject);
-                _keyImage.SetActive (true);
                 _keyAddAudio.Play ();
+                _keyImage.SetActive (true);
             }
         }
     }
