@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragonMountain : MonoBehaviour
 {
+    //[SerializeField] GameObject _champsDeForce;
     private void OnTriggerEnter (Collider other)
     {
         var player = other.GetComponentInParent<PlayerTag> ();
@@ -13,7 +14,7 @@ public class DragonMountain : MonoBehaviour
             //if (player.ObjetRécupéré == true)
             //{
                   //trigger.SetActive (false);
-                  //ChampsDeForce.SetActive(false);
+                  //_champsDeForce.SetActive(false);
             //}
         }
     }
