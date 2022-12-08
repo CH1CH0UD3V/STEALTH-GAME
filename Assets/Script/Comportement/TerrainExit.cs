@@ -10,9 +10,10 @@ public class TerrainExit : MonoBehaviour
     {
         var playerTag = other.GetComponentInParent<PlayerTag> ();
         //var player = GameObject.Find (playerTag.name);
-        if (playerTag != null && playerTag.SpawnPointActivated ==true)
+        if (playerTag != null && playerTag.HasKey == true/*&& playerTag.SpawnPointActivated ==true*/)
         {
             SceneManager.LoadScene (0);
+            playerTag.HasKey = false;
             //Destroy (transform.parent.gameObject);
             //Instantiate (other, SpawnPoint.transform.position, SpawnPoint.transform.rotation);
             

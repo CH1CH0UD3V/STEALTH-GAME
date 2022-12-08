@@ -15,7 +15,7 @@ public class BlockAttack : MonoBehaviour
         _animatorAttack.SetTrigger ("Attack");
         //_animatorHit.SetTrigger ("Hit");
         _health.Damage (damage);
-        Debug.Log ($" Fait bellek, ta vie descend il te reste,{_health.CurrentHealth}PV, soit tu fuis,soit tu lui démontes sa grand-mère.");
+        Debug.Log ($" Fait Attention!!!, ta vie descend il te reste,{_health.CurrentHealth}PV, soit tu fuis,soit tu lui démontes sa grand-mère.");
 
     }
 }
