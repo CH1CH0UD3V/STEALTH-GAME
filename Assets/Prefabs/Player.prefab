@@ -71,6 +71,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a6ff8ff1b18664faf6dd6fece8c437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &845477513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845477514}
+  m_Layer: 8
+  m_Name: HitCast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &845477514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845477513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.507, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2678896991119393979}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873311218329869207
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,9 +262,9 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1.68
   m_Radius: 0.41
-  m_SlopeLimit: 50
+  m_SlopeLimit: 40
   m_StepOffset: 1.68
-  m_SkinWidth: 0.04
+  m_SkinWidth: 0.4
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.84, z: 0}
 --- !u!114 &2678896992212374031
@@ -265,6 +296,8 @@ MonoBehaviour:
   _animationDie: {fileID: 2357833485491219251}
   _enemy: {fileID: 0}
   _player: {fileID: 2678896990615696137}
+  _ifPlayerDead: 1
+  _ifEnemyDead: 0
 --- !u!114 &7113416602018315350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +921,7 @@ Transform:
   - {fileID: 2678896991297377430}
   - {fileID: 2678896991078550214}
   - {fileID: 9043130547248449379}
+  - {fileID: 845477514}
   m_Father: {fileID: 2678896990615696138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1055,6 +1089,14 @@ MonoBehaviour:
   _accelerate: 1.72
   _jumpForce: 0.75
   _gravity: -9.81
+  _leftArrowWhite: {fileID: 0}
+  _leftArrowRed: {fileID: 0}
+  _rightArrowWhite: {fileID: 0}
+  _rightArrowRed: {fileID: 0}
+  _upArrowWhite: {fileID: 0}
+  _upArrowRed: {fileID: 0}
+  _downArrowWhite: {fileID: 0}
+  _downArrowRed: {fileID: 0}
 --- !u!114 &1359873462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,7 +2173,7 @@ PrefabInstance:
     - target: {fileID: 7169274372601786421, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32165062
+      value: 0.32165006
       objectReference: {fileID: 0}
     - target: {fileID: 7169274372601786421, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
@@ -2545,7 +2587,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745863484960872825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 

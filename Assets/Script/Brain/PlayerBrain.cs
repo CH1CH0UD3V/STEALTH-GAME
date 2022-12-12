@@ -6,17 +6,23 @@ using UnityEngine.InputSystem;
 public class PlayerBrain : MonoBehaviour
 {
     #region Champ
-    [Header ("Input")]
+    [Header ("Inputs")]
+    [Space(10)]
     [SerializeField] InputActionReference _move;
+    [Space(10)]
     //[SerializeField] InputActionReference _interraction;
     [SerializeField] InputActionReference _jump;
+    [Space(10)]
     [SerializeField] InputActionReference _sprint;
+    [Space(10)]
     [SerializeField] InputActionReference _attack;
-
-    [Header ("")]
+    [Space(30)]
+    [Header ("Links")]
+    [Space(10)]
     [SerializeField] BlockMovement movement;
+    [Space(10)]
     [SerializeField] BlockAttack attack;
-    //[SerializeField] ScriptableObject _sO; //l'utiliser plus tard
+    //[SerializeField] ScriptableObject _sO; //l'utiliser plus tard.
     #endregion
 
 
@@ -98,6 +104,7 @@ public class PlayerBrain : MonoBehaviour
     #region Attack
     private void StartAttack (InputAction.CallbackContext obj)
     {
+
         attack.LaunchAttack ();
     }
     #endregion

@@ -10,7 +10,7 @@ public class HitBoxPlayer : MonoBehaviour
         var enemy = other.GetComponentInParent<EnemyTag> ();
         if (enemy != null )
         {
-            _attack.LaunchAttack();            
+            _attack.LaunchAttack();
             return;
         }
         else
