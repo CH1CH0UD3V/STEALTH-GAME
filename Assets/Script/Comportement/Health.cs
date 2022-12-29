@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -34,22 +35,18 @@ public class Health : MonoBehaviour
             {//
                 _animationDie.SetBool ("IsDead", _IsDead);
                 //_player.SetActive (false);
+                SceneManager.LoadScene (0);
             }//
             if (_ifEnemyDead)//
             {//
                 _enemy.SetActive(false);
             }//
-            Mathf.Min(0, CurrentHealth);
+            Mathf.Min(CurrentHealth, 0);
         }
         if (CurrentHealth > _healthMax)
         {
-            Mathf.Max(CurrentHealth, _healthMax);
+            Mathf.Max(_healthMax, CurrentHealth);
         }
-        //if(_currentHealth < _healthMax)
-        //{
-        //    //si je sélectionne une potion que je vais créer plustard j'augmente de point. et du coup ce sera _currentHealth += _healing(entre 10 et 30PV).
-        //    Heal (_healing);
-        //}
     }
 
     public void Damage(int damage)
@@ -57,8 +54,8 @@ public class Health : MonoBehaviour
         CurrentHealth -= damage;
     }
 
-    public void Heal (int healing)
-    {
-        CurrentHealth += healing;
-    }
+    //public void Heal (int healing)
+    //{
+    //    CurrentHealth += healing;
+    //}
 }

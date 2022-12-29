@@ -60,12 +60,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "FocusMode",
+                    "name": "TargetMode",
                     "type": "Button",
                     "id": "327e2fd4-2f9c-4685-86ab-e50bcec2977a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -176,7 +176,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FocusMode",
+                    "action": "TargetMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

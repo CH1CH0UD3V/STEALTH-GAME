@@ -263,7 +263,7 @@ CharacterController:
   m_Height: 1.68
   m_Radius: 0.41
   m_SlopeLimit: 40
-  m_StepOffset: 1.68
+  m_StepOffset: 0
   m_SkinWidth: 0.4
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.84, z: 0}
@@ -1086,9 +1086,9 @@ MonoBehaviour:
   _animator: {fileID: 2357833485491219251}
   _followCameraOrientation: 1
   _speed: 4
-  _accelerate: 1.72
+  _accelerate: 2.25
   _jumpForce: 0.75
-  _gravity: -9.81
+  _gravity: -6.22
   _leftArrowWhite: {fileID: 0}
   _leftArrowRed: {fileID: 0}
   _rightArrowWhite: {fileID: 0}
