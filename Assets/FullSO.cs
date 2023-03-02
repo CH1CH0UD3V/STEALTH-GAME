@@ -38,7 +38,7 @@ public class FullSO : ScriptableObject//le bordel fait l'identification du perso
         Grounded ();
     }
 
-    void Normal_Forward () 
+    public void Normal_Forward () 
     {
         RaycastHit hit;
         Ray _ray = new Ray (Character.transform.position, Vector3.forward);
@@ -51,7 +51,7 @@ public class FullSO : ScriptableObject//le bordel fait l'identification du perso
             Rigidbody _rbFWD = hit.rigidbody;
         }
     }
-    void Normal_Left ()
+    public void Normal_Left ()
     {
         RaycastHit hit;
         Ray _ray = new Ray (Character.transform.position, Vector3.left);
@@ -64,7 +64,7 @@ public class FullSO : ScriptableObject//le bordel fait l'identification du perso
             //Rigidbody _rbL = hit.rigidbody;
         }
     }
-    void Normal_Right ()
+    public void Normal_Right ()
     {
         RaycastHit hit;
         Ray _ray = new Ray (Character.transform.position, Vector3.right);
@@ -77,7 +77,7 @@ public class FullSO : ScriptableObject//le bordel fait l'identification du perso
             //Rigidbody _rbR = hit.rigidbody;
         }
     }
-    void Normal_Back ()
+    public void Normal_Back ()
     {
         RaycastHit hit;
         Ray _ray = new Ray (Character.transform.position, Vector3.back);
@@ -90,7 +90,7 @@ public class FullSO : ScriptableObject//le bordel fait l'identification du perso
             //Rigidbody _rbBCK = hit.rigidbody;
         }
     }
-    void Grounded ()
+    public void Grounded ()
     {
         RaycastHit hit;
         Ray _ray = new Ray (Character.transform.position, Vector3.down);

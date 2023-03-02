@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
             if (_ifEnemyDead)//
             {//
                 _enemy.SetActive(false);
-            }//
+            }//            
             Mathf.Min(CurrentHealth, 0);
         }
         if (CurrentHealth > _healthMax)
